@@ -32,6 +32,8 @@ Pour **ajouter** un component, cliquez sur le bouton "**Add Component**" sur l'o
 
 ![alt text](/img/00012.png)
 
+Lorsqu'on **ajoute** un component à un GameObject, une **interface** propre au compnent s'affiche dans l'onglet "**Inspector**", cet interface contient au moins l'**entête** du component. La plupart des components permettent de **modifier** des **variables** directement depuis l'**éditeur**, c'est ici que vous pourrez **tester** différentes configuration pour correctement **paramétrer** vos components.  
+
 Le **GameObject** possède désormais un **Sprite Renderer**. Cependant vous vous apercevez que ce dernier ne s'affiche toujours **pas** sur l'écran.  
 Le Sprite Renderer a besoin d'un **Sprite** à afficher et par défaut cette valeur est à **None**.
 
@@ -40,7 +42,7 @@ Le Sprite Renderer a besoin d'un **Sprite** à afficher et par défaut cette val
 ![alt text](/img/00013.png)
 
 Ainsi pour **afficher** notre **GameObject** il faut tout d'abord lui donner un **Sprite**. **Donnez** lui en un ou **créez** en un.  
-Pour créer un **Sprite** allez dans l'onglet "**Project**" > Dans le dossier "**Assets**" (dossier par défaut) >** Clic droit** > **Create** > **2D** > **Sprite** > **Square**.  
+Pour créer un **Sprite** allez dans l'onglet "**Project**" > Dans le dossier "**Assets**" (dossier par défaut) > **Clic droit** > **Create** > **2D** > **Sprite** > **Square**.  
 Donnez lui le nom que vous souhaitez (par défaut "**Square**").  
 
 Pour plus d'information concernant les Sprites, **référez-vous sur le cours sur les Sprites**.
@@ -58,3 +60,35 @@ Pour donner notre nouveau **Sprite** au Component il y a deux manières.
 
 ![alt text](/img/00016.png)
 
+
+## Comment créer son Component ?
+
+Il y a deux moyens sur Unity pour créer un component :  
+
+1. Sélectionnez un **GameObject** > Cliquez sur "**Add Component**" > **Recherchez** le component que vous voulez **créer** > Sélectionnez "**New script**"
+
+![alt text](/img/00017.png)
+
+2. Dans l'onglet "**Project**" initialement placé sur le bas de l'éditeur > **Clic droit** > **Create** > **C# Script** > Donnez lui le **nom** du component  
+
+![alt text](/img/00018.png)
+
+**Remarque: Il est conseillé de placé son script dans un répertoire prévu pour cet effet**  
+
+Sur Unity, un **script C#** vierge (fraîchement crée) est par **défaut** considéré comme un **component**. Si vous avez crée ce component en utilisant la **seconde méthode** ou que vous voulez le **rajouter** à un autre GameObject, ce component est désormais **trouvable** dans la **fenêtre de recherche** lorsque vous voulez ajouter un nouveau component.  
+
+![alt text](/img/00019.png)
+
+### Comment éditer son component ?
+
+Pour **éditer** son component, il faut simplement **double-cliquer** sur le **script C#** dans votre onglet "**Project**". Cela ouvrira votre **IDE** par défaut (Pour **modifier** son IDE par défaut : Onglet "**Edit**" > **Preferences** > **External Tools** > **External Script Editor** > **Sélectionnez** votre IDE).  
+
+Voici comment se présente un **component vierge** sur Unity :  
+
+![alt text](/img/00020.png)
+
+Pour plus d'information concernant l'éditions de components, **référez-vous à la section C# du cours sur les Components**.  
+
+**Notez** juste ici que c'est l'**héritage** de **MonoBehavior** qui permet à Unity d'identifier ce script comme étant un **Component**. Enlevez cet héritage et le script C# redevient un script **basique**.
+
+**Remarque: MonoBehavior signifie que ce scrip peut être attaché à un GameObject.**
