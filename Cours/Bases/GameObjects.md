@@ -21,7 +21,7 @@ Ce component permet de situé le GameObject sur l'environnement 2D/3D de Unity. 
 
 ### Comment ajouter un component à notre GameObject ?
 
-Pour pouvoir ajouter un component à votre GameObject, référez-vous à la partie "**Inspector**" initialiement situé à droite de votre éditeur.  
+Pour pouvoir ajouter un component à votre GameObject, référez-vous à la partie "**Inspector**" initialement situé à droite de votre éditeur.  
 Par défaut l'inspecteur est vide et ne comporte aucune information. Pour ajouter un component, commencez par sélectionner le GameObject concerné.  
 
 Si vous avez sélectionnez un GameObject vierge, il aura par défaut le TransformComponent. Pour lui ajouter un nouveau component, cliquez sur "**Add Component**".  
@@ -45,7 +45,7 @@ Ainsi, le component devrais être supprimé du GameObject et de l'**inspector**.
 ### Comment créer ses propres components ?
 
 Par défaut unity propose tout un catalogue de components que l'on peut venir utiliser dans nos GameObjects.  
-Mais viens rapidement le moment où ces components ne suffisent plus et où la création de nos propres components devient inévitables.  
+Mais vient rapidement le moment où ces components ne suffisent plus et où la création de nos propres components devient inévitable.  
 
 Pour créer ses components, Unity dispose d'un langage de programmation (**C#**) à travers lequel le développement des components sera possible.  
 Pour plus d'informations à ce sujet, **veuillez-vous référer au cours sur les components**.
@@ -74,7 +74,7 @@ Si vous vous **perdez** dans votre scène ou que vous ne **retrouvez plus** un G
 Sur la gauche de l'éditeur Unity se trouve l'onglet "**Hiérarchie**". C'est dans celui-ci que vous pouvez **créer et organiser** tous vos GameObjects.  
 Chaque GameObjects de votre hiérarchie peut intéragir avec un autre, cependant il peut arriver que certains soit bien plus liés que d'autres (Une arme à feu et ses balles, Le tronc d'un arbre et ses feuilles, etc...).  
 
-Pour organiser cela il est possible de créer une relation **Parent-Enfant** à vos GameObject. Un GameObject jouera ici le rôle de **parent**, et ce derniers pourra avoir un ou plusieurs GameObjects **enfants** qui à leurs tours peuvent avoir d'autres **enfants**.  
+Pour organiser cela il est possible de créer une relation **Parent-Enfant** à vos GameObject. Un GameObject jouera ici le rôle de **parent**, et ce dernier pourra avoir un ou plusieurs GameObjects **enfants** qui à leurs tours peuvent avoir d'autres **enfants**.  
 En suivant ce **schéma** dans l'organisation de vos GameObjects. Vous allez être capable non seulement d'**organiser** au mieux votre onglet "hiérarchie" mais également de **faciliter** les interactions entre ces GameObjects.  
 
 Prenons l'exemple suivant (chaque GameObjects dans l'exemple est vierge) :  
@@ -85,7 +85,7 @@ Prenons l'exemple suivant (chaque GameObjects dans l'exemple est vierge) :
 
 En reprenant l'exemple ci-dessus. Pour correctement hiérarchiser le projet en suivant une relation **Parent-Enfant** il faut tout d'abord correctement **identifier le problème**.  
 Ici, on retrouve notre étoile, le soleil, certaines planètes du système solaire et 2 lunes, celle de la Terre et une lune de Saturne.  
-Pour les hiérarchiser, nous allons donc suivre le schéma suivant: Le soleil est la racine de tout et sera donc le parent de tous les GameObjects présent dans le système solaire. Ensuite les satellites (La Lune et Titan) seront chacune les enfants de leurs planètes respectivement (faisant d'elle les **petits enfants** du soleil).  
+Pour les hiérarchiser, nous allons donc suivre le schéma suivant: Le soleil est la racine de tout et sera donc le parent de tous les GameObjects présent dans le système solaire. Ensuite les satellites (La Lune et Titan) seront chacune les enfants de leur planète respectivement (faisant d'elle les **petits enfants** du soleil).  
 
 Ainsi, en modifiant la hiérarchisation en suivant le modèle **Parent-Enfant**, nous obtenont le schéma suivant :
 
@@ -96,7 +96,7 @@ Ainsi, en modifiant la hiérarchisation en suivant le modèle **Parent-Enfant**,
 
 La hiérarchisation **Parent-Enfant** permet de lier des GameObject ensemble. Cependant dans un jeu vous allez parfois finir par manipuler des **milliers** de GameObjects.  
 
-Pour correctement organiser notre onglet "**Hierarchy**", il est utile de créer des GameObjects vierge qui nous seront pas utilisé en jeu mais qui sont utilisés comme des "**dossiers**" dans lesquels ont va ranger les GameObject utilisé.  
+Pour correctement organiser notre onglet "**Hierarchy**", il est utile de créer des GameObjects vierge qui ne seront pas utilisés en jeu mais comme des "**dossiers**" dans lesquels ont va ranger les GameObject utilisé.  
 
 Par exemple en reprenant notre exemple nous pouvons créer le GameObject "Voie Lactée" dans lequel nous allons ranger le système solaire. Ce GameObject "Voie Lactée" sera lui placé dans un GameObject suivant un format libre que nous aimons définir comme suit : "**### nom_du_GameObject ###**".  
 
@@ -109,13 +109,13 @@ Ainsi en suivant ce format, l'onglet "Hierarchy" sera organisé même si il se r
 
 ### Les bonnes pratiques dans la hiérarchisation des GameObjects
 
-Bien hiérarchiser ses GameObjects est **essentielle** dans le bon développement d'un projet. Plus tôt vous avez appris les concepts de bases et qu'il était possible de créer des GameObjects **vides** pour permettre de ranger plus **facilement** ses GameObjects et permettre une organisation de l'onglet "Hierarchy" plus **fluide**.  
+Bien hiérarchiser ses GameObjects est **essentiel** dans le bon développement d'un projet. Plus tôt vous avez appris les concepts de bases et qu'il était possible de créer des GameObjects **vides** pour permettre de ranger plus **facilement** ses GameObjects et permettre une organisation de l'onglet "Hierarchy" plus **fluide**.  
 
 Cependant il est important de suivre différentes étapes pour correctement hiérarchiser son projets.  
 
-> Est-il nécessaire de constamment créer des GameObjects vide pour ranger ses GameObjects ?  
+> Est-il nécessaire de constamment créer des GameObjects vides pour ranger ses GameObjects ?  
 
-**Non**. L'utilisation des GameObjects vide est principalement utilisés lorsque l'on est amené à créer un **grand nombre** de GameObjects du même type, **qui peuvent être rangé ensemble**. Par exemple, une forêt contient des centaines/milliers d'arbres. Dans un jeu, chaque arbre et un GameObject. Il serait donc judicieux de créer un GameObject "Foret" qui contiendrais chaque Arbre.  
+**Non**. L'utilisation des GameObjects vides est principalement utilisé lorsque l'on est amené à créer un **grand nombre** de GameObjects du même type, **qui peuvent être rangés ensemble**. Par exemple, une forêt contient des centaines/milliers d'arbres. Dans un jeu, chaque arbre est un GameObject. Il serait donc judicieux de créer un GameObject "Foret" qui contiendrais chaque Arbre.  
 
 > Comment se retrouver lorsque de nombreux GameObjects se ressemblent ?  
 
@@ -148,7 +148,7 @@ Ils sont utilisés principalement dans deux grandes catégories: le **rendu** et
 
 De la même manière que les **Tags**, les Layers permettent de **catégoriser** les GameObjects mais pour leurs **interactions** avec le **moteur de jeu**.  
 
-**Le rendu**: Vous pouvez assigner des GameObjects à un certains Layer et faire en sorte que votre caméra de jeu n'affichent **que** les GameObjects présent dans ce Layer. Ainsi tous les autres GameObjects seront **ignorés** et cela économisera des performances.  
+**Le rendu**: Vous pouvez assigner des GameObjects à un certain Layer et faire en sorte que votre caméra de jeu n'affiche **que** les GameObjects présent dans ce Layer. Ainsi tous les autres GameObjects seront **ignorés** et cela économisera des performances.  
 
 **Les collisions**: Vous pouvez définir dans quels Layer les collisions d'un GameObject font effet (Par défaut tous les Layers). Ainsi vous pourrez faire en sorte qu'un GameObject puissent intéragir avec un **certains** **types** de GameObjects.  
 
